@@ -25,7 +25,7 @@ export default function Item({ result }: Props) {
     <article className="m-4 max-w-lg">
       <div className="flex flex-row gap-4">
         <div className="flex flex-col justify-center">
-          <Image
+          <img
             src={result.thumbnail.source}
             alt={result.title}
             width={result.thumbnail.width}

@@ -1,5 +1,6 @@
 import React from "react";
 import getResults from "@/lib/getResults";
+import Item from "./components/Item";
 
 type Props = {
   params: {
@@ -34,7 +35,7 @@ export default async function SearchResults({ params: { searchTerm } }: Props) {
       {results ? (
         Object.values(results).map((result) => {
           // eslint-disable-next-line react/jsx-key
-          return <p>{JSON.stringify(result)}</p>;
+          return <Item key={result.pageid} result={result} />;
         })
       ) : (
         <h2 className="p-2 text-xl">{`${searchTerm} Not Found`}</h2>
